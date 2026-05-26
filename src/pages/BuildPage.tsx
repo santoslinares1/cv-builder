@@ -93,7 +93,7 @@ type EditableFieldOptions = {
   rows?: number;
 };
 
-const STORAGE_KEY = "cv-builder-data-v4";
+const STORAGE_KEY = "factory-resume-data-v5";
 
 const STEPS: { id: StepId; label: string; icon: React.ElementType }[] = [
   { id: 1, label: "Profile", icon: User },
