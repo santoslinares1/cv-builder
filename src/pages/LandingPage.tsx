@@ -55,16 +55,26 @@ export default function LandingPage() {
       if (!response.ok) {
         throw new Error("Could not send message.");
       }
-  
+      
+      trackEvent("contact_form_submitted", {
+        source: "landing_contact_form",
+      });
+      
       setContactForm({
         name: "",
         email: "",
         message: "",
       });
-  
+      
       setContactStatus("sent");
     } catch (error) {
-      console.error(error);
+        console.error(error);
+
+
+        trackEvent("contact_form_error", {
+          source: "landing_contact_form",
+        });
+
       setContactStatus("error");
     }
   };

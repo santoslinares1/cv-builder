@@ -2,19 +2,25 @@ type AnalyticsEvent =
   | "landing_view"
   | "create_cv_click"
   | "builder_opened"
-  | "pdf_export_clicked";
+  | "pdf_export_clicked"
+  | "contact_form_submitted"
+  | "contact_form_error";
 
 type AnalyticsParams = Record<string, string | number | boolean | null | undefined>;
 
 declare global {
   interface Window {
-    gtag?: (...args: any[]) => void;
+    gtag?: (
+      command: "event" | "config" | "js",
+      eventNameOrId: string | Date,
+      params?: AnalyticsParams
+    ) => void;
   }
 }
 
 export function trackEvent(eventName: AnalyticsEvent, params: AnalyticsParams = {}) {
   const payload = {
-    app: "cv_builder",
+    app: "factory_resume",
     ...params,
   };
 
