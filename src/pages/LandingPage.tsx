@@ -156,7 +156,7 @@ export default function LandingPage() {
                     </div>
                     <div className="min-w-0">
                       <div className="truncate text-xl font-black sm:text-2xl">
-                        Santos Linares
+                        Alex Morgan
                       </div>
                       <div className="truncate text-[10px] font-black uppercase tracking-widest text-indigo-700 sm:text-xs">
                         Full Stack Developer

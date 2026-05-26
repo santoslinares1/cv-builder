@@ -177,19 +177,19 @@ const emptyCvData: CvData = {
 
 const sampleCvData: CvData = {
   personal: {
-    fullName: "Santos Linares",
+    fullName: "Alex Morgan",
     title: "Co-Founder & CTO · Full Stack Developer",
-    email: "santos@email.com",
-    phone: "+54 9 351 000-0000",
-    location: "Cordoba, Argentina",
-    website: "santos.dev",
+    email: "Alexmorgan@email.com",
+    phone: "+1 (555) 123-45670",
+    location: "New York, NY",
+    website: "alex.dev",
     summary:
       "Full-stack developer focused on product, frontend/backend architecture, and building SaaS solutions. Experienced in leading internal systems, integrations, and automation-oriented platforms.",
   },
   experience: [
     {
       id: 1,
-      company: "GREENLIGHT",
+      company: "Startup",
       role: "Co-Founder & CTO",
       period: "2025 - Present",
       desc:
@@ -207,7 +207,7 @@ const sampleCvData: CvData = {
   education: [
     {
       id: 1,
-      institution: "FAMAF / National University of Cordoba",
+      institution: "National University",
       degree: "Computer Science",
       period: "In progress",
       desc: "Training in programming fundamentals, mathematics, logic, and computer science.",
@@ -1808,7 +1808,7 @@ export default function BuilderPage() {
                 label="Full name"
                 value={cvData.personal.fullName}
                 onChange={(value) => updatePersonalInfo("fullName", value)}
-                placeholder="Ex: Santos Linares"
+                placeholder="Ex: Alex Morgan"
               />
 
               <TextInput
