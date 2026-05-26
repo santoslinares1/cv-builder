@@ -346,13 +346,13 @@ export default function LandingPage() {
 
           <div className="flex items-center gap-4">
             <Link
-              to="/politicas-de-privacidad"
+              to="/privacy-policy"
               className="font-bold hover:text-slate-950"
             >
               Privacy Policy
             </Link>
             <Link
-              to="/sobre-nosotros"
+              to="/about-us"
               className="font-bold hover:text-slate-950"
             >
               About us

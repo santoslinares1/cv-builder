@@ -9,8 +9,8 @@ export default function App() {
     <Routes>
       <Route path="/" element={<LandingPage />} />
       <Route path="/builder" element={<BuilderPage />} />
-      <Route path="/politicas-de-privacidad" element={<PrivacyPolicyPage />} />
-      <Route path="/sobre-nosotros" element={<AboutUsPage />} />
+      <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+      <Route path="/about-us" element={<AboutUsPage />} />
     </Routes>
   );
 }
