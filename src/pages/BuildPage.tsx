@@ -4,7 +4,6 @@ import {
   Check,
   ChevronLeft,
   ChevronRight,
-  Download,
   Eye,
   FileText,
   Globe,
@@ -23,7 +22,6 @@ import {
   RotateCcw,
   Sparkles,
   Trash2,
-  Upload,
   User,
 } from "lucide-react";
 import { trackEvent } from "../lib/analytics";
@@ -561,19 +559,7 @@ export default function BuilderPage() {
     showToast("Sample data loaded.", "success");
   }, [showToast]);
 
-  const handleExportJson = useCallback(() => {
-    const blob = new Blob([JSON.stringify(cvData, null, 2)], { type: "application/json" });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement("a");
-    const name = cvData.personal.fullName ? cvData.personal.fullName.replace(/\s+/g, "_") : "cv";
 
-    link.href = url;
-    link.download = `${name}.json`;
-    link.click();
-
-    URL.revokeObjectURL(url);
-    showToast("JSON exported.", "success");
-  }, [cvData, showToast]);
 
   const handleImportJson = useCallback(
     async (event: React.ChangeEvent<HTMLInputElement>) => {
